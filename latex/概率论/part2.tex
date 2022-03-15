@@ -1,0 +1,128 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+    \section{随机变量及其分布}
+    \subsection{随机变量及其分布函数}
+    \subsubsection{随机变量}
+    1.定义:设$\varOmega  $为一个样本空间，若对任意的$\omega \subset \varOmega $,
+    都有一个实数$X(\omega) $于之对应，那么称$X(\omega) $是一个随机变量
+    \subsubsection{随机变量的分布函数}
+    1.定义:
+    \[F(x) = P(X \leq x),x \in R \]
+    $F(x)$是随机变量的分布函数
+
+    2.随机变量与高等函数中所学函数的不同:随机变量无法定义极限，
+    也就无法定义连续性和求导
+
+    3.分布于函数的特点:每个随机变量都由唯一的分布函数，并且一维随机变量的概率特性
+    完全由它的分布函数来决定
+
+    4.分布函数的性质
+    \[\begin{cases}
+        \text{(1)右连续  }  \\
+        \text{(2)单调不减  }  \\
+        \text{(3)}F(-\infty) = 0,F(+\infty) = 1  \\  
+
+    \end{cases}\]
+    当一个函数$g(x) $满足上述三个性质，则必然存在一个随机变量，使g为其分布函数
+
+    5.推导公式
+    \begin{gather}
+        P(a\leq X \leq b) = P(b) - P(a - 0)  \notag \\
+        P(a < X < b) = P(b - 0) - P(a)   \notag \\
+        P(a\leq X < b) = P(b - 0) - P(a - 0)   \notag 
+    \end{gather}
+
+    \subsection{离散型随机变量}
+    \subsubsection{分布列及其性质}
+    1.定义:随机变量X的取值为一些离散的值(可列多个)，
+    那么X就是一个离散型随机变量
+    \[P(X = x_i) = p_i \]
+    为X的分布列
+
+    2.特点:离散型随机变量的分布函数和分布列等价，而且离散型随机变量
+    的分布函数一定是阶梯函数，反过来也成立，一个随机变量的分布函数是
+    阶梯函数，那么它一定是离散型随机变量
+
+    3.性质:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)非负性:$p_i \geq 0 $
+
+        2)归一性:$\sum_{i=1}^\infty p_i = 1 $
+
+    \end{minipage}
+
+    \subsubsection{常见的离散型随机变量}
+    1.二项分布:将样本空间$\varOmega  $以$A,\overline{A} $做划分，$P(A) = p,1 - P(A) = q $
+    设离散型随机变量X为在n次独立重复的试验中事件A发生的次数，则:
+    \[P(X = k) = C_n^kp^kq^{n-k},\quad k = 0,1,\cdots,n \]
+    称X服从参数为n的二项分布，记为$X~B(n,p) $
+
+    note:1)0-1分布:$X~B(1,p) $，只进行一次随机试验
+
+    2.泊松分布:对于稀有事件，其发生的概率p很小，但是试验的次数n很大时，
+    设离散型随机变量X为在n次独立重复的试验中事件发生的次数，则:
+    \[P(X = k) = \frac{\lambda ^k}{k!}e^{-\lambda },\quad k = 0,1,\cdots,n  \]
+    称X服从参数为n的泊松分布，记为$X~P(\lambda ) $
+
+    note:1)泊松逼近定理:设X~B(n,p)$\lim_{n \to \infty}np_n =\lambda  $  
+    \[lim_{n \to \infty}C_n^kp^k(1-p)^{n-k} = \frac{\lambda ^k}{k!}e^{-\lambda } ,\quad k = 0,1,\cdots,\] 
+    说明泊松分布就是特殊情况下的二项分布
+
+    3.几何分布:将样本空间$\varOmega  $以$A,\overline{A} $做划分，$P(A) = p,1 - P(A) = q $
+    设离散型随机变量X为在n次独立重复的试验中事件A首次发生时的试验次数，则:
+    \[P(X = k) = pq^{k-1},\quad k = 1,2,\cdots, \]
+    称X服从参数为n的几何分布，记为$X~G(p) $
+
+    note:无记忆性:若$X~G(p) $，则
+    \[P(X > n+ t|X > n) = P(X > t) \]
+
+    4.超几何分布:取出问题，无放回，无次序
+    \[P(X = k) = \frac{C_M^kC_{N-M}^{N-k}}{C_N^n} \]
+    当N趋于无穷大时，类似于二项分布
+    \subsection{连续型随机变量}
+    在非离散的随机变量中，仅讨论分布函数可以写为
+    $F(x) = \int_{x}^{-\infty}f(t)  \,dt  $的连续型随机变量
+    \subsubsection{连续性随机变量的定义与密度函数}
+    以几何概型为例，在区间上随机放点，放在某一个区域的概率$P(c\quad d) = \frac{c - d}{b - a} $
+    那么对于在该区间上的一个点e，$P(e\quad e) = 0 $,无法运算，所以我们使用概率密度来描述
+
+    概率密度为单位长度的概率，在求某一个区间的概率时，只需要对长度积分即可
+    
+    1.定义:对于一个分布函数F(x)满足
+    \[\int_{-\infty}^{x}f(t)  \,dt  \]
+    则X是连续性随变量， f(t)是它的概率密度函数
+
+    2.性质:1)非负性。2)归一性
+
+    note:1)连续型随机变量的分布函数连续，但是分布函数连续不能保证随机变量是连续型
+
+    2)在密度函数f(x)的连续点$x_0$处，有$F'(x_0) = f(x_0)$
+
+    3)
+    \[P(a < X \leq b) = \int_{a}^{b}f(x) \,dx\]
+    \subsubsection{常见的连续型随机变量}
+    1.均匀分布
+
+    在一个区间内，等可能任取一点记为X，X的密度函数:
+    \[f(x) = 
+    \begin{cases}
+        \frac{1}{b - a} & \text{if } a<x<b \\
+        0 & \text{if } \text{其他}
+    \end{cases} \]
+    称X在区间(a,b)上服从均匀分布，记为X~U(a,b)
+    做积分的均匀分布的分布函数
+    \[F(x) = 
+    \begin{cases}
+        0 & \text{if } x<a \\
+        \frac{x-a}{b-a} & \text{if } a\leq x<b \\
+        1 & \text{if } b\leq x
+    \end{cases}\]
+    2.指数分布
+
+    3.正态分布
+
+\end{document}

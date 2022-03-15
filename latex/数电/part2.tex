@@ -1,0 +1,62 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+    \section{逻辑门电路}
+    \subsection{逻辑门电路}
+    \subsubsection{基本逻辑门电路}
+    1.与门
+
+    1)结构:两个或以上输入，一个输出
+
+    2)逻辑函数:$F = A\cdot B $
+
+    3)功能:当输入全为高电平时输出高电平，其余全输出低电平
+
+    4)运算类比集合:将1视为全集，0视为空集，则有:将$\cdot $ 看作集合运算中的$\cap $ 
+
+    2.或门
+
+    1)结构:两个或以上输入，一个输出
+
+    2)逻辑函数:$F = A + B $
+
+    3)功能:当输入有高电平时输出高电平，输入没有高电平时输出低电平
+
+    4)运算类比集合:将1视为全集，0视为空集，则有:$ + $看作集合运算中的$\cup $ 
+    
+    3.非门
+
+    1)结构:一个输入，一个输出
+
+    2)逻辑函数:$F =\overline{A}$
+
+    3)功能:当输入有高电平时输出低电平，输入低电平时输出高电平
+
+    4)运算类比集合:将1视为全集，0视为空集，则有:看作集合运算中的取补集
+
+    note:记忆所有的逻辑符号课本P15
+
+    \subsubsection{复合逻辑门电路}
+    1.与非门:先与运算，再非运算，$F = \overline{A\cdot B} $
+
+    2.或非门:先或运算，再非运算,$F = \overline{A + B} $
+
+    3.与或非门:先与运算或运算，再非运算,$F = \overline{A\cdot B + C\cdot D} $
+
+    4.异或门:当输出相同时输出低电平，输入不同时输出高电平,$F = A\oplus B = A\overline{B} + \overline{A}B $
+
+    5.同或门:异或门的结果再进行非运算得到,$F = A\otimes B = \overline{A\overline{B} + \overline{A}B} = \overline{A\cdot B} + A\cdot B $
+
+
+    \subsection{TTL集成门电路}
+    此部分为理论推导，课本p17看详细过程
+
+    记忆:TTL带负载门最多8个
+
+
+
+
+\end{document}

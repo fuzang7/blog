@@ -1,0 +1,201 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+    \section{概率论的基本概念}
+    \subsection{随机事件及其运算}
+    \subsubsection{随机实验和随机事件}
+    1.随机实验条件:
+
+
+    \begin{quote}
+        1)可重复性
+
+
+        2)结果有多个且已知 
+
+        
+        3)结果不可预知 
+    \end{quote}
+
+
+    2.
+    \begin{minipage}[t]{0.9\linewidth}
+        样本空间:$\Omega = \{\omega \} $ 所有可能结果的集合
+
+        样本点:$\Omega $ 中的一个元素
+
+        随机事件:
+        \begin{minipage}[t]{0.8\linewidth}
+            集合$\Omega $ 的子集，其中$\Omega $ 本身为必然事件，$\emptyset $ 为不可能事件
+
+            当事件 A 中的样本点出现称为事件 A 发生
+        \end{minipage}
+    \end{minipage}
+    
+
+    \subsubsection{事件间的关系和运算}
+    1.事件的包含与相等:同集合的包含与相等
+
+    2.和事件（并集）: $A \cup B \iff$ A和B至少有一件发生
+
+    3.积事件（交集）: $A \cap  B = AB \iff$ A和B同时发生
+
+    4.差事件（差集）: $A - B \iff$ A发生但B不发生
+
+    5.补事件（补集）: $\overline{A} = \Omega - A $ , $A - B = A - AB = A\overline{B}$
+
+    6.互不相容（互斥）
+    \subsection{概率的定义及其基本性质}
+    \subsubsection{频率和概率}
+    1.频率:$f_n(A) = \frac{n_A}{n}  $ ,实验重复n次，其中事件A发生的次数为$n_A $
+
+    \quad 性质:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)非负性:$f_n(A) \geq 0 $
+
+        2)归一性:$f_n(\Omega) = 1 $
+
+        3)可列可加性:若$A_1 , A_2 , \cdots , A_k $为两两不相容事件,则:\[f_n(\bigcup _{i=1}^k A_i) = \sum_{i=1}^k f_n(A_i)  \]
+        
+    \end{minipage}
+
+    2.概率:当随机实验重复的次数足够多时，事件A发生的频率将趋近于一个常数，这个常数就是事件A发生的概率，记作P(A)
+
+    概率公理化定义:
+    \begin{minipage}[t]{0.9\linewidth}
+        随机实验中，对于事件A，有一个常数P(A)满足:
+
+        1)非负性:$P(A) \geq 0 $
+
+        2)归一性:$P(\Omega) = 1 $
+
+        3)可列可加性:若$A_1 , A_2 , \cdots , A_k $为两两不相容事件,则有:\[P(\bigcup _{i=1}^k A_i) = \sum_{i=1}^k P(A_i)  \]
+    
+    \end{minipage}
+    则称P(A)为事件A的概率
+    
+    概率的性质:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)$P(\varPhi ) = 0 $
+
+        2)有限可加:若$A_1 , A_2 , \cdots , A_n $为两两不相容事件,则有:\[P(\bigcup _{i=1}^n A_i) = \sum_{i=1}^n P(A_i)  \]
+
+        3)若$A\subset B $,则$P(A) \le P(B) $
+
+        4)$P(A) + P(\overline{A}) = 1  $
+
+        5)$P(A - B) = P(A\overline{B}) = P(A) - P(AB) $
+
+        6)$P(A + B) = P(A) + P(B) - P(AB) $
+        \ 更多项相加时记忆口诀:单加双减
+    \end{minipage}
+    \subsection{等可能概型}
+    \subsubsection{古典概型}
+    1.定义:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)样本空间中的样本的总数有限
+
+        2)每个样本点出现的可能性相等
+
+    \end{minipage}
+
+    2.计数方法(课本p12页例题):
+    \begin{minipage}[t]{0.9\linewidth}
+        1)取球问题
+
+        2)分房(分组)问题
+
+        3)抽签问题
+
+        4)生日问题
+
+    \end{minipage}
+
+    \subsubsection{几何概型}
+    1.定义:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)样本空间中的样本的总数无限
+
+        2)每个样本点出现的可能性相等
+
+    \end{minipage}
+
+    常利用长度面积体积的比来求概率
+
+    2.计数方法:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)会面问题
+
+    \end{minipage}
+    \subsection{条件概率}
+    \subsubsection{条件概率的定义}
+    1.定义:在已知事件B发生的情况下事件A发生的概率记为$P(A\vert B) $
+
+    2.性质:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)非负性:$P(A\vert B) \geq 0 $
+
+        2)归一性:$P(\Omega \vert B) = 1 $
+
+        3)可列可加性:若$A_1 , A_2 , \cdots  $为两两不相容事件,则有:\[P(\bigcup _{i=1}^\infty A_i\vert B) = \sum_{i=1}^\infty P(A_i\vert B)  \]
+
+    \end{minipage}
+    \subsubsection{乘法公式}
+    乘法公式:\[P(B\vert A) = \frac{P(AB)}{P(A)} \]
+
+    \subsubsection{全概率公式和贝叶斯公式}
+    1.全概率公式:设$A_1 ， A_2 , \cdot , A_n $是$\varOmega $的一个划分，则是对任意的事件B有:
+    \[P(B) = \sum_{i=1}^n {P(A_i)P(B\vert A_i)  }  \] 
+
+    在此处n可以取$\infty $
+
+    使用全概率公式的情况:1)一个随机试验包括两个阶段，其中第二个阶段的结果收第一个阶段的影响. 2)第一个阶段的所有可能结果已知.3)求第二个阶段的概率。将第一个阶段的各种情况看作是划分
+
+    2.贝叶斯公式:设$A_1 ， A_2 , \cdot , A_n $是$\varOmega $的一个划分,如果$P(A_k) > 0 $,则对认识的事件B，只要$P(B) > 0 $,就有
+
+    \[P(A_k\vert B) = \frac{P(A_kB)}{P(B)} = \frac{P(A_k)P(B\vert A_k)}{\sum_{i=1}^n {P(A_i)P(B\vert A_i)  }} \]
+
+    \subsection{独立性和伯努利试验}
+    \subsubsection{独立性}
+    1.定义:对于事件A和事件B，当$P(AB) = P(A)P(B) $时，A和B相互独立。该式子是证明独立性的唯一条件。
+
+    note:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)$P(AB) = P(A)P(B)  \nLeftrightarrow  P(B\vert A) = P(B) $,后者要求$P(A) > 0 $,用前者作为定义显然适用性更广
+
+        2)独立性表明A对B的概率没有影响，而不是说A对B没有影响
+
+        3)区别两两独立和相互独立，两两独立仅是所有两者组合独立，而相互独立包括三者及以上的独立性，所以相对独立条件包括两两独立，为更强条件
+
+    \end{minipage}
+
+    2.性质:
+    \begin{minipage}[t]{0.9\linewidth}
+        1)独立事件必然相容，且在每一部分的概率成比例
+
+        2)事件A与自身独立，则$P(A) = 1 \quad or \quad P(A) = 0  $
+
+        3)在$(A,B), (\overline{A},B),(A,\overline{B}),(\overline{A},\overline{B}) $之中，有一对相互独立，则其他几组也都相互独立
+
+    \end{minipage}
+    \subsubsection{n重伯努利试验}
+    1.定义:一个试验E仅有两种结果$A,\overline{A} $,并且$P(A) = p,P(\overline{A}) = 1 - p = q (0 < p < 1) $而对这个试验重复n次，这n次试验相互独立，则将这n次试验看作一次试验，称为n重伯努利试验。
+    
+    求事件A出现m次的概率:
+    \[P(A_m) = C_n^m P(A)^m P(\overline{A})^{n-m} = C_n^m p^m q^{n-m} \] 
+
+
+
+    
+
+
+
+    
+
+
+    
+\end{document}

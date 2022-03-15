@@ -1,0 +1,206 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+    \section{磁路}
+    \subsection{磁场的基本物理量}
+    1.
+    \begin{minipage}[t]{0.9\linewidth}
+    磁通$\varPhi $ ,单位:Wb
+
+    磁场穿过某个截面的磁感线的条数$\varPhi = BA $
+    \end{minipage}
+
+
+    2.磁感应强度B ,单位:T，矢量，又称磁通密度，掌握右手螺旋定则
+
+    3.
+    \begin{minipage}[t]{0.9\linewidth}
+    磁场强度H ,单位:A/m, 矢量
+    
+    方向和B相同，$H\propto i  $
+    
+    
+    表示电流本身产生磁场的强弱
+    
+
+    \end{minipage}  
+
+    4.
+    \begin{minipage}[t]{0.9\linewidth}
+    磁导率$\mu = \tfrac{B}{H} $，单位:H/m，表示介质的导磁能力，值会随着介质的磁化程度变化
+    \end{minipage}
+    \subsection{物质的磁性能}
+    按照磁导率的差异，分为非磁性物质和磁性物质
+    \subsubsection{非磁性物质}
+    总体特点$\mu  \approx \mu_0 $ 
+
+    其中 $\mu > \mu_0 $ 为顺磁物质，$\mu < \mu_0 $ 为反磁物质
+
+    工业上将所有非磁性物质的磁导率看作$\mu_0 $ ,非磁性物质的B和H成线性关系
+    \subsubsection{磁性物质}
+    由于磁畴，产生的特殊点
+
+    特点:
+    \begin{minipage}[t]{0.9\linewidth}
+        1.$\mu \gg \mu_0 $
+
+        2.$\mu $ 会随着磁化程度的变化而变化，从而导致3
+
+        3.B和H成非线性关系
+
+        4.2 3 称为磁饱和性，熟悉初始磁化曲线
+
+        5.磁滞性:B的变化滞后于H，熟悉基本磁化曲线,记忆$H_c $ 矫顽磁力,$B_r $ 剩磁强度
+
+        6.根据磁化曲线的不同，将磁性物质分为三种:硬磁物质，软磁物质，矩磁物质
+
+        \quad 硬磁物质:$H_c $ $B_r $ 较大
+
+        \quad 软磁物质:$H_c $ $B_r $ 较小，用于变压器，电机等的铁心
+
+        \quad 矩磁物质:磁滞回线为矩形，用于电子技术和计算技术中
+    \end{minipage}
+    \subsection{磁路的基本定律}
+    主磁通$\varPhi $:大部分经过铁心闭合的磁通
+
+    漏磁通$\varPhi _\sigma   $:少部分经过空气等非磁性物质的磁通
+
+    磁路:主磁通经过的路径
+    \subsubsection{磁路欧姆定律}
+    1.恒定磁通
+
+    根据磁通连续性定律，全电流定律
+
+    磁阻$R_m = R_mc + R_mo = \frac{l_c}{\mu _cA_c} + \frac{l_0}{\mu _0A_0} $
+
+    磁通势$F = NI $
+
+    则有
+    \begin{equation}
+        \varPhi  = \tfrac{F}{R_m}\label{1}
+    \end{equation}
+
+    公式 \eqref{1} 是恒定磁场中的欧姆定律,在$R_m = R_mc + R_mo $ 中，$R_mo \gg R_mc $,则在F一定的情况下，磁路中出现空气隙会使$\varPhi $ 减小很多
+
+    2.交变磁通的磁路欧姆定律
+
+    \[ \dot{\varPhi_m } = \frac{\dot{F_m}}{Z_m} \]
+
+    其中$\dot{F_m} $ 为磁通势的幅值，$\dot{F_m} = NI_m = \sqrt{2}NI  $
+
+    $Z_m $为磁阻抗,$Z_m = R_m + jX_m $
+
+    \subsubsection{磁路基尔霍夫定律}
+    以恒定磁通磁路为例
+    
+    1.磁路基尔霍夫第一定律:磁路的一个封闭面流出磁通等于流入磁通，记流出为正流入为负则有$\sum \varPhi = 0 $
+
+    2.磁路基尔霍夫第二定律:在磁路任意一个闭合回路中，磁位差的代数和等于磁通势的代数和$\sum U_m = \sum F $
+    \subsection{铁心线圈电路}
+    \subsubsection{直流铁心线圈电路}
+    直流电流产生恒定磁场，不产生感应电动势，电感相当于短路，所以
+    \[I = \frac{U}{R} \]
+
+    线圈消耗的功率只有电阻消耗的功率:
+    \[P = I^2R = UI \]
+    \subsubsection{交流铁心线圈电路}
+    推导见课本
+
+    1.电磁关系:设交流电压u，线圈中通过的电流i，则交流电压在铁心中产生交变磁通，记其中主磁通$\varPhi  $,漏磁通$\varPhi _\sigma  $,主磁通漏磁通在线圈中产生电动势e和$e_\sigma $,线圈电阻R。
+    由基尔霍夫电压定律:
+    \[u = -e + -e_\sigma + Ri \]
+    写做相量
+    \[\dot{U} = -\dot{E} - \dot{E_\sigma} + R\dot{I} \]
+    由于漏磁通的路径为非磁性物质，则磁导率为常数，$\varPhi _\sigma $和i正比，漏磁通对应的线圈电感
+    \[L_\sigma = \frac{N\varPhi _\sigma}{i} \]
+    为常数，在交流电路中的电抗称为漏电抗，简称漏抗:
+    \[X = \omega L_\sigma = 2\pi fL_\sigma  \]
+    又电感的电压和电感电动势相位相反:
+    \[\dot{E_\sigma} = -jX\dot{I} \]
+    则有电动势平衡方程:
+    \[\dot{U} = -\dot{E} + (R + jX)\dot{I} = -\dot{E} + Z\dot{I} \]
+    式中:
+    \[Z = R + jX \]
+    为线圈的漏阻抗。
+
+    主磁通由于磁导率会变化，不能用以上的处理方式，直接用电磁感应定律分析，得到结果
+    \[\dot{E} = -j4.44Nf\dot{\varPhi _m} \]
+    在忽略R和X时
+    \[U = E = 4.44Nf\varPhi _m \]
+    说明在电压U和频率f不变时，主磁通$\varPhi _m $几乎不变
+
+    2.功率关系
+
+    交流铁心线圈有功功率:$P = UI\cos \varphi  $,有功功率包括铜损耗和铁损耗
+
+    铜损耗:$P_{Cu} = RI^2 $,就是线圈电阻的功率损耗
+
+    铁损耗:
+    \begin{minipage}[t]{0.9\linewidth}
+        包括两部分:磁滞损耗$P_h $,涡流损耗$P_e $
+       
+        1)磁滞损耗:由磁化过程中磁畴相互摩擦造成，经验公式:
+
+        \[P_h = K_hfB_m^\alpha V \]
+
+        $K_h $为磁滞损耗系数，取决于材料，V是铁心体积，$\alpha  $取决于材料。
+
+        选用软磁物质可减小改损耗
+
+        2)涡流损耗:由于涡旋电流产生的损耗，经验公式:
+
+        \[P_e = K_ed^2f^2B_m^2V\]
+
+        $K_e $为磁滞损耗系数,大小和材料的电阻率成反比，d为钢片厚度，V是铁心体积
+
+        选用电阻率大的磁性材料减小该损耗；使用多片硅钢片叠加可以减小该损耗
+
+        铁损耗是两者损耗的和
+
+        \[P_{Fe} = P_h + P_e\]
+        
+        经验公式:
+
+        \[P_{Fe} = K_{Fe}f^\beta B_m^2m\]
+
+        $K_{Fe} $铁心的损耗系数，$\beta  $频率系数，m铁心质量。恒定磁通的磁路无铁损耗
+
+        工程上采用损耗曲线计算铁损耗
+
+    \end{minipage}
+    
+    3.等效电路
+
+    目的:将交流铁心线圈电路简化为单纯电路问题
+
+    \begin{align}
+        \dot{E} & = -j4.44Nf\dot{\varPhi } =  -j4.44Nf\frac{\dot{F_m}}{\dot{Z_m}} = -j4.44Nf\frac{\sqrt{2}N\dot{I} }{R_m+jX_m}\notag \\
+        & = -4.44\sqrt{2}N^2f\Biggl( \frac{X_m}{R_m^2 + X_m^2}+j\frac{R_m}{R_m^2+X_m^2}\Biggr) \dot{I} \notag
+    \end{align}
+    \[R_0 = 4.44\sqrt{2}N^2f\frac{X_m}{R_m^2 + X_m^2} \]
+    \[X_0 = 4.44\sqrt{2}N^2f\frac{R_m}{R_m^2 + X_m^2} \]
+    \[Z_0 = R_0 + jX_0 \]
+
+    $R_0 X_0 Z_0 $分别是励磁电阻，励磁电抗，励磁阻抗，则
+    \[\dot{E} = -(R_0 + jX_0)\dot{I} = -Z_0\dot{I} \]
+    由于U，f不变时$\varPhi _m $基本不变，近似$R_0 X_0 Z_0 $为常数，则电动势平衡方程改写为:
+    \[\dot{U} = (R_0 +jX_0)\dot{I} + (R + jX)\dot{I} = (Z + Z_0)\dot{I} \]
+    得到交流铁心线圈电路的等效电路图课本图1.4.4
+
+    电流I通过R和$R_0 $的功率是有功功率
+    \[P_{Cu} = RI^2 \]
+    \[P_{Fe} = R_0I^2\]
+    $R_0 $代表铁损耗的等效电阻，X代表漏磁通电感形成的电抗，$X_0 $代表主磁通电感形成的电抗
+
+    产生主磁通的电流为励磁电流，由于$R_0 \gg R , X_0 \gg X $,则可认为I是励磁电流
+    
+
+
+\end{document}
+
+
+
+

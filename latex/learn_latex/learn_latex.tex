@@ -1,0 +1,18 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+    \section{数学公式的编辑测试}
+    \subsection{行间公式}
+    直接添加的方式\\
+    勾股定理:
+    $ a^2 + b^2 = c^2 $
+    \subsection{行间公式 使用equation环境的方式}
+    \begin{equation}
+        a^2 + b^2 = c^2 \label{a^2 + b^2 = c^2}
+    \end{equation}
+    Equation \eqref{a^2 + b^2 = c^2} is 勾股定理
+    在此处可以修改锅删去公式编号
+\end{document}
