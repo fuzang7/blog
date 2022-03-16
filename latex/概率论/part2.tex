@@ -123,6 +123,57 @@
     \end{cases}\]
     2.指数分布
 
+    电子产品的工作寿命X，则X的密度函数:
+    \[f(x) = 
+    \begin{cases}
+        \lambda e^{-\lambda x} & , x > 0 \\
+        0 & , x \leq 0
+    \end{cases}\]
+    其中参数为$\lambda $,称X服从参数为$\lambda $的指数分布，记作$X~E(\lambda )$
+
+    分布函数:
+    \[F(x) = 
+    \begin{cases}
+        1-e^{-\lambda x} & ,x > 0 \\
+        0 & , x \leq 0
+    \end{cases}\]
+    类似于几何分布，指数分布也有无记忆性:
+
+    \[P(X>t+s|X>t) = P(X>s)\]
     3.正态分布
 
+    对于一种统计数据X，将其当作随机变量，则概率密度:
+    \[f(x) = \frac{1}{\sqrt{2\pi }\sigma }e^{-\frac{(x-\mu )^2}{2\sigma ^2}}, x \in R\]
+    其中$\mu \in R,\sigma >0$,称X服从正态分布，记作$X~N(\mu ,\sigma ^2)$
+
+    $\mu $位置参数，f(x)关于$x=\mu $f对称，$\sigma $形状参数，$\sigma $越小f(x)图像越窄越高
+
+    正态分布的分布函数:
+    \[F(x) = \frac{1}{\sqrt{2\pi }\sigma}\int_{-\infty}^{x}e^{-\frac{(t-\mu)^2}{2\sigma^2}}  \,dt \]
+    标准正态分布:取$\mu = 0 ，\sigma  = 1$ 密度函数:
+    \[\phi (x) = \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}},x\in R\]
+    分布函数:
+    \[\Phi (x) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{x}e^{-\frac{t^2}{2}}\,dt \]
+    note:正态分布化标准正态分布:若$X~N(\mu ,\sigma ^2)$,则$\frac{X-\mu}{\sigma} ~N(0,1)$
+    \subsection{随机变量函数的分布}
+    已知随机变量X和其密度函数分布函数，而$Y = g(x)$，一般情况，Y是和X同类型的随机变量，如何求出Y的密度函数
+    \subsubsection{离散型}
+    已知$P(X = x_i) = p_i$,则$P(Y = g(x_i)) = p_i$
+
+    当函数Y=g(X)不单调时，得到的相同的Y概率要求和
+    \subsubsection{连续型}
+    步骤:
+    \begin{minipage}[t]{0.9\linewidth}
+        1.由X的取值范围求出Y的取值范围
+
+        2.求出Y的分布函数$F_Y(y)$
+
+        3.对Y的分布函数计算积分后求导(均匀分布)或者直接求导得到密度函数
+        
+    \end{minipage}
+    note:当y = g(x)是严格单调函数，并且具有一阶连续导数时，x = h(y)是y = g(x)的反函数，则Y = g(X)的密度函数:
+    \[f_Y(y) = f_X(h(y))|h'(y)|\]
+
+
+    
 \end{document}
