@@ -56,6 +56,34 @@
 
     记忆:TTL带负载门最多8个
 
+    \subsubsection{门槛电压}
+    仅对ttl由这个作用，在输入端连接接地的门槛电阻$R_i$,临接电压$R_T = 2k\Omega $
+
+    当$R_i < R_T$时，等效输入低电平
+
+    当$R_i > R_T$时，等效输入高电平
+
+    对地悬空($R_i = \infty$)视为逻辑高电平
+
+    \subsubsection{三态门}
+
+    1.高电平有效:
+    
+    EN:使能输入端；
+
+    EN = 1,F = $\overline{AB} $
+
+    EN = 0,F = Hi - Z (悬空)
+    
+    2.低电平有效
+
+    EN = 1,F = Hi - Z (悬空)
+
+    EN = 0,F = $\overline{AB} $
+    \subsection{MOS逻辑电路}
+    课本p28
+
+
 
 
 

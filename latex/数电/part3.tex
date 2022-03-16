@@ -1,0 +1,60 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+    \section{逻辑代数基础}
+    \subsection{逻辑代数运算法则}
+    \subsubsection{基本逻辑运算}
+    1.与
+    
+    2.或
+
+    3.非
+    \subsubsection{逻辑代数基本定理}
+    同离散数学，新增0 1，将0理解为空集，1理解为全集即可
+
+    \subsubsection{逻辑代数的基本规则}
+    1.代入
+
+    2.反演:对于一个逻辑函数F，将其中的变量取反，与运算变或运算，或运算变
+    与运算，0换1，1换0，最后得到的函数$\overline{F}$依然成立,为F的反函数
+
+    3.对偶:对于一个逻辑函数F，与运算变或运算，或运算变
+    与运算，0换1，1换0，最后得到的函数$F'$依然成立,为F的对偶式
+    $(F')' = F$
+    \subsubsection{常用公式}
+    p43，习题熟悉
+    \subsection{逻辑函数的标准形式}
+    \subsubsection{最小项和标准与或式}
+    和离散数学中的主析取范式完全相同
+    1.最小项:多个变量取乘积为与项，每个变量和其否定不同时出现，n个变量有$2^n$个最小项
+
+    2.标准与或式(主析取范式):每项都是最小项的与或式
+    \subsubsection{最大项和标准或与式}
+    同离散数学主合取范式
+    \subsubsection{最大项和最小项的关系}
+    最大项和最小项互补:$\overline{m_i} = M_i$
+
+    主析取范式变为主合取范式过程:
+
+    \ 1.求出主析取范式中没有小项
+
+    \ 2.求出和1中小项相同下标的大项
+
+    \ 3.2中所有大项合取，就是所求对应的主合取范式
+    \subsection{逻辑函数的公式化简法}
+    最简逻辑函数在连接电路时最简单，节省材料，所以需要将原函数简化。
+
+    最简表达式:与-或表达式，或-与表达式，与非-与非，或非-或非，与-或-非，或-与-非
+
+    要求:项数最少，每项变量个数最少
+    \subsection{卡诺图化简法}
+    \subsection{卡诺图}
+    
+
+    
+
+
+\end{document}
