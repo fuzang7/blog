@@ -201,7 +201,37 @@ $\frac{U_1}{I_1} $视为从一次绕组看进去的等效阻抗模$|Z_e| $
 
 负载电感性:$\varphi _2 > 0$;电阻性:$\varphi _2 = 0$;电容性:$\varphi _2 < 0$
 \subsubsection{效率特性}
+1.功率:变压器由电源输出的有功功率
+\[P_1 = U_1I_1\cos\varphi _1\]
+变压器输出的有功功率
+\[P_2 = U_2I_2\cos\varphi _2\]
 
+2.损耗:总损耗
+\[P_1 - P_2 = P_{Cu} + P_{Fe}\]
+\begin{align}
+    P_{Cu} & = R_1I_1^2 + R_2I_2^2 \notag \\
+    & = R_1I_1^2 + R'_2I'_2{}^2 \text{ T形等效} \notag \\
+    & = R_SI_1^2 = R_SI'_2{}^2 \text{ 简化等效} \notag \\
+    & = \beta ^2P_S \text{ 短路试验}
+\end{align}
+
+其中
+\[\beta = \frac{I_1}{I_{1N}}\]
+所以铜损会变，称为可变损耗
+\begin{align}
+    P_{Fe} & = R_0I_0^2 \text{ T形等效} \\
+    & = P_0 \text{ 空载试验}
+\end{align}
+由于铁损和$I_2$无关，称为不变损耗
+3.效率
+\[\eta = \frac{P_2}{P_1} * 100\%\]
+在忽略$V_R$
+\[\eta = \frac{\beta S_N\lambda _2}{\beta S_N\lambda _2 + P_0 + \beta ^2P_S} * 100\%\]
+
+4.效率特性:
+当$U_1 = U_{1N},\cos \varphi _2$常数时，$\eta = f(I_2) $或$\eta = f(\beta)$
+有求导求$\eta$的最大值，在$P_{Cu} = P_{Fe}$时，有最大值
+\subsection{三相变压器的联结组}
 
 \end{document}
 \subsection{三相变压器的联结组}

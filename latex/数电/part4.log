@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.28)  17 MAR 2022 15:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.28)  18 MAR 2022 14:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**part3
-(./part3.tex
+**part4
+(./part4.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (d:/latex/texlive/2021/texmf-dist/tex/latex/ctex/ctexart.cls (d:/latex/texlive/2021/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/03/14 v2.5.6 Backend configuration file (CTEX)
@@ -515,8 +515,8 @@ LaTeX Info: Redefining \] on input line 2924.
 )
 \@quotelevel=\count424
 \@quotereset=\count425
- (./part3.aux)
-\openout1 = `part3.aux'.
+ (./part4.aux)
+\openout1 = `part4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -612,11 +612,11 @@ Package biblatex Info: ... and expl3
  (d:/latex/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
-\openout3 = `part3-blx.bib'.
+\openout3 = `part4-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'part3.bbl' found.
- (./part3.bbl)
+Package biblatex Info: ... file 'part4.bbl' found.
+ (./part4.bbl)
 Package biblatex Info: Reference section=0 on input line 6.
 Package biblatex Info: Reference segment=0 on input line 6.
 
@@ -655,32 +655,24 @@ Package biblatex Info: Reference segment=0 on input line 6.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (16.74861pt too wide) in paragraph at lines 23--35
-[]\TU/lmr/m/n/10.95 1. \TU/FandolSong-Regular(0)/m/n/10.95 定 子\TU/lmr/m/n/10.95 : [] 
- []
-
-
-Overfull \hbox (16.74861pt too wide) in paragraph at lines 36--49
-[]\TU/lmr/m/n/10.95 2. \TU/FandolSong-Regular(0)/m/n/10.95 转 子\TU/lmr/m/n/10.95 : [] 
+Overfull \hbox (38.6486pt too wide) in paragraph at lines 11--22
+[]\TU/lmr/m/n/10.95 1. \TU/FandolSong-Regular(0)/m/n/10.95 分 析 步 骤\TU/lmr/m/n/10.95 : [] 
  []
 
 [1
 
-]
-LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.95> not available
-(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 109.
- [2] (./part3.aux)
-Package logreq Info: Writing requests to 'part3.run.xml'.
-\openout1 = `part3.run.xml'.
+] (./part4.aux)
+Package logreq Info: Writing requests to 'part4.run.xml'.
+\openout1 = `part4.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15032 strings out of 478866
- 353427 string characters out of 5864967
- 907117 words of memory out of 5000000
- 34747 multiletter control sequences out of 15000+600000
- 407003 words of font info for 59 fonts, out of 8000000 for 9000
+ 15003 strings out of 478866
+ 351499 string characters out of 5864967
+ 901117 words of memory out of 5000000
+ 34720 multiletter control sequences out of 15000+600000
+ 406987 words of font info for 57 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 101i,5n,104p,1848b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,4n,104p,1848b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on part3.pdf (2 pages).
+Output written on part4.pdf (1 page).

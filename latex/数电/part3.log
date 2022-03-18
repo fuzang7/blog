@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.28)  16 MAR 2022 14:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.28)  18 MAR 2022 10:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -657,18 +657,22 @@ Package biblatex Info: Reference segment=0 on input line 6.
 [1
 
 ]
+Overfull \hbox (16.74861pt too wide) in paragraph at lines 58--67
+[]\TU/lmr/m/n/10.95 2. \TU/FandolSong-Regular(0)/m/n/10.95 特 点\TU/lmr/m/n/10.95 : [] 
+ []
+
 LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.95> not available
-(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 60.
- [2] (./part3.aux)
+(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 89.
+[2] (./part3.aux)
 Package logreq Info: Writing requests to 'part3.run.xml'.
 \openout1 = `part3.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15010 strings out of 478866
- 351766 string characters out of 5864967
- 908117 words of memory out of 5000000
- 34725 multiletter control sequences out of 15000+600000
+ 15021 strings out of 478866
+ 352600 string characters out of 5864967
+ 910117 words of memory out of 5000000
+ 34736 multiletter control sequences out of 15000+600000
  407003 words of font info for 59 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  101i,5n,104p,1848b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
