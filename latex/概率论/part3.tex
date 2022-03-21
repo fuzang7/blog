@@ -8,7 +8,7 @@
     \subsection{二维随机变量的联合分布和边际分布}
     \subsubsection{二维随机变量的联合分布函数与性质}
     1.联合分布函数:
-    \[F(x,y) = P(X<x,Y<y)\]
+    \[F(x,y) = P(X\leq x,Y\leq y)\]
 
     2.性质:
     \begin{minipage}[t]{0.9\linewidth}
@@ -30,8 +30,10 @@
 
     \subsubsection{边际分布函数}
     F(x,y)是(X,Y)的联合分布函数，在二维变量里X的分布函数为:
-    \[F_X(x) = P(X\leq x) =P(X\leq x,Y\leq +\infty); x\in R\]
+    \[F_X(x) = P(X\leq x) =P(X\leq x,Y\leq +\infty) = F(x,+\infty ); x\in R\]
     称为边际分布函数,$F_Y(y)$同理
+
+    一般从联合分布函数可以求出边际分布函数，但是由两个边际分布函数很难求出联合分布函数、
 
     \subsection{二维离散随机变量}
     当X，Y都是离散型随机变量时
@@ -42,13 +44,25 @@
 
     note:由联合分布列可以求出联合分布函数:$F(x,y) = \sum _{x_i\leq x}\sum _{y_i\leq y}p_{ij}$
     \subsubsection{离散型随机变量的边际分布}
-    1.X的边际分布:$P(X = x_i) = P(X = x_i,Y < +\infty)，p_{i\cdot} = \sum _j = p_{ij}$,Y同理
+    1.X的边际分布$p_{i\cdot}$:$P(X = x_i) = P(X = x_i,Y < +\infty)，p_{i\cdot} = \sum _j  p_{ij}$,Y同理
 
-    \subsubsection{条件分布函数}
+    Y的边际分布$p_{\cdot j}$同理
+
+    \subsubsection{二维离散随机变量的独立性}
+    1.定义:(X,Y)是二维随机变量，对于X，Y所有的取值$x_1,X_2,\cdots y_1,y_2,\cdots$若有
+    \[P(X = x_i,Y = y_j) = P(X = x_i)P(Y = y_j)\]
+    则称X，Y相互独立
+
+    \subsubsection{二维离散型随机变量的条件分布列}
+    1.定义:(X,Y)是二维随机变量，对于X，Y所有的取值$x_1,X_2,\cdots y_1,y_2,\cdots$称
+    \[p_{i|j} \triangleq P(X = x_i|Y = y_j) = \frac{P(X = x_i,Y = y_j)}{P(Y = y_j)}\]
+    为已知${Y = y_i}$条件下的X的分布列
+    
+    对于Y同理可以定义
 
     \subsection{二维连续型随机变量及其分布}
     \subsubsection{联合分布密度}
-    1.定义:F(x,y)分布函函数，存在非负函数f(x,y)使得所有的实数x，y有:
+    1.定义:F(x,y)分布函数，存在非负函数f(x,y)使得所有的实数x，y有:
     \[F(x,y) = P(X\leq x,Y\leq y) = \int_{-\infty}^x\int_{-\infty}^yf(u,v)\,dvdu\]
     
     2.f(x,y)性质:
@@ -57,11 +71,44 @@
 
         2)$\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}f(x,y)\,dxdy = 1$
 
-        3)
+        3)F(x,y)是二元连续函数
 
-        4)
+        4)在f(x,y)的连续点处有
+        \[\frac{\partial ^2F(x,y)}{\partial x \partial y} = f(x,y)\]
 
-        5)
     \end{minipage}
 
+        note:X,Y一维连续，不一定有(X,Y)二维连续；但(X,Y)二维连续，一定有X，Y一维连续
+    \subsubsection{二维连续型随机变量的边际密度}
+    1.定义:(X,Y)是二维连续型随机变量，联合密度函数f(x,y)，X的边际密度函数:
+    \[f_X(x) = \int _{-\infty}^{+\infty}f(x,y)\,dy, x\in \mathbb{R}\]
+    Y的边际密度函数同理定义
+
+    \subsubsection{常用二维连续型随机变量的分布}
+    1.二维均匀分布
+    设D为平面有界闭区间，其面积$S_D$，若密度函数:
+    \[f(x,y) = 
+    \begin{cases}
+        \frac{1}{S_D} &, (x,y)\in D \\
+        0 &, (x,y)\notin D
+    \end{cases}\]
+    称为二维变量(X,Y)服从D上的二维均匀分布
+
+    若G是D的子区域，则
+    \[P((x,y)\in G) = \iint _G f(x,y) \, d\sigma = \frac{1}{S_D}\iint _G \,d\sigma = \frac{S_G}{S_D}\]
+    2.二维正态分布
+
+    记忆:$(X,Y)\text{~}N(\mu _1,\mu _2,\sigma _1,\sigma _2,\rho )$，则$X\text{~}N(\mu _1,\sigma _1^2),Y\text{~}N(\mu _2,\sigma _2^2)$
+
+    \subsubsection{二维连续型随机变量的独立性}
+    1.定义:$f(x,y) = f_X(x)f_Y(y)$
+    或$F(x,y) = F_X(x)F_Y(y)$
+
+    2.性质:$(X,Y)~N(\mu _1,\mu _2,\sigma _1,\sigma _2,\rho )$,则XY相互独立的充要条件$\rho = 0$
+    \subsubsection{二维连续型随机变量的条件密度}
+    由于二维连续型随机变量在某一条线上的概率是0，所以无法用和离散型随机变量一样的公式处理，选择使用分布函数代替
+
+    1.条件分布函数:1)极限求 p78；2)$F_{X|Y}(x|y) = \int _{-\infty}^{x}\frac{f(u,y)}{f_Y(y)}\,du$
+
+    2.条件密度函数:$f_{X|Y}(x|y) = \frac{f(x,y)}{f_Y(y)}  (f_Y(y) > 0)$
 \end{document}
