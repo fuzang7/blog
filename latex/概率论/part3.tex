@@ -111,4 +111,20 @@
     1.条件分布函数:1)极限求 p78；2)$F_{X|Y}(x|y) = \int _{-\infty}^{x}\frac{f(u,y)}{f_Y(y)}\,du$
 
     2.条件密度函数:$f_{X|Y}(x|y) = \frac{f(x,y)}{f_Y(y)}  (f_Y(y) > 0)$
+    \subsection{二维随机变量函数的分布}
+    $Z = g(X,Y)$是一个一维随机变量，讨论二维随机变量(X,Y)与一维随机变量Z的关系
+    \subsubsection{离散型}
+    1.泊松分布可加性:若X~P($\lambda _1$),Y~P($\lambda _2$),Z = X + Y，则Z~($\lambda _1 + \lambda _2$) 
+
+    \subsubsection{连续型}
+    1.$F_Z(z) = P(Z \leq z) = P(g(x,y) \leq z) = P((X,Y)\in D_z) = \iint _{D_z}f(x,y)\,dxdy$
+
+    2.求解顺序:1)求出Z的范围;2)求出Z的分布函数;3)对Z的分布函数求导得到Z的密度函数
+
+    \subsubsection{极大极小分布}
+    1.极大分布:X,Y相互独立,Z = max{X,Y};则$F_Z(z) =  P(Z \leq z) = P(X \leq z , Y \leq z) = F_X(z)*F_Y(z)$
+    可以推广到无穷多项
+
+    2.极小分布:X,Y相互独立,Z = min{X,Y};则$F_Z(z) =  1 - P(Z > z ) = 1 - P(X > z,Y > z) = 1 - (1 - F_X(z))(1 - F_Y(z))$
+    可以推广到无穷多项
 \end{document}
