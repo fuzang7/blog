@@ -1,0 +1,95 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\begin{document}
+\section{直流电机的电力拖动}
+\subsection{他励直流电动机的机械特性}
+机械特性:在$U_a,R_a,I_f$不变时，电动机转速n和电磁转矩T之间的关系
+\begin{align}
+    n &= \frac{U_a}{C_E\varPhi } - \frac{R_a}{C_EC_T\varPhi ^2}T  \label{root}      \\
+    & = n_0 - \gamma T \notag \\
+    & = n_0 - \Delta n   \notag
+\end{align}
+
+上式中，$n_0$为理想空载转速，$\gamma = |\frac{dn}{dT}| = \frac{R_a}{C_EC_T\varPhi ^2}$为机械特性的斜率
+机械特性的硬度$\alpha  = \frac{1}{\gamma }$
+
+\subsubsection{固有特性}
+固有特性:$U_a,I_f$保持额定值，电枢电路中没有外接电阻时的机械特性
+
+\[n = f(T)|_{U_{aN},I_{fN},R_a}\]
+
+在p213图像上，左侧的N点位电动机的额定状态，能长期运行；右侧的M点为临界状态，可以短时间过载，过载能力$\alpha _{MC} = \frac{I_{amax}}{I_{aN}}$
+
+\subsubsection{人为特性}
+根据 \eqref{root}公式分析
+
+1.增加电枢电阻时的人为特性
+$R_a$增加，引起变化$n_0$不变，$\gamma $增加，$\alpha $减小
+
+2.降低电枢电压时的人为特性
+$U_a$降低，引起变化$n_0$降低，$\gamma,\alpha $不变
+
+3.减小励磁电流时的人为特性
+$I_a$降低,引起变化$\varPhi $降低,$n_0,\gamma$增加,$\alpha $减小
+
+\subsection{他励直流电动机的起动}
+起动电流:直流电动机电源刚接通瞬间，转子没有转动时，电动机的输入电流
+
+起动转矩:起动瞬间的电磁转矩
+
+起动电流的分析:他励电动机起动瞬间，n = 0，E = 0，则起动电流$I_S = \frac{U_a}{R_a}$
+在额定电压下起动时，由于电阻$R_a$太小，所以起动电流很大，能达到额定电流的十倍以上，
+造成起动转矩也达到额定转矩的十倍以上，极容易造成电动机的损坏。除了微型电动机，不然不会允许
+直流电动机直接起动。
+
+为了安全起动，需要限制起动电流，也就是减小$U_a$或增大$R_a$
+
+\subsubsection{降低电枢电压起动}
+额外使用一台可以调节电压的专用直流电源，在起动时，施加额定的励磁电压励磁电流$U_f,I_f$，让电枢电压从0逐渐增加到
+额定值
+
+优点:能耗小，平稳
+
+缺点:贵
+
+\subsubsection{增加电枢电阻起动}
+1.无极起动
+
+对于额定功率较小的电动机，在电枢电路内串联起动变阻器，在起动时，施加额定的励磁电压励磁电流$U_f,I_f$，
+让起动变阻器为最大电阻，随着转速的增加，让起动变阻器的大小逐渐减小，直到全部切除
+
+起动变阻器最大值$R_{ST} = \frac{U_a}{I_S} - R_a;\text{忽略}T_0,R_a = \frac{U_{aN} - \frac{P_N}{I_{aN}}}{I_{aN}}$
+由于忽略，估算$R_a$偏大
+
+2.有级起动
+
+
+
+\subsection{他励直流电动机的调速}
+由
+\[n &= \frac{U_a}{C_E\varPhi } - \frac{R_a}{C_EC_T\varPhi ^2}T\]
+改变$R_a,U_a,\varPhi $都能改变转速
+
+\subsubsection{改变电枢电阻调速}
+
+\subsubsection{改变电枢电压调速}
+
+\subsubsection{改变励磁电流调速}
+
+\subsection{他励直流电动机的制动}
+
+\subsubsection{能耗制动}
+
+1.迅速停机时的能耗制动
+
+2.下放重物时的能耗制动
+
+\subsubsection{反制制动}
+
+1.迅速停机时的反制制动
+
+2.下放重物时的反制制动
+
+\end{document}

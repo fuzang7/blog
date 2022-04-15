@@ -1,0 +1,43 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+    \section{触发器}
+    1.触发器:具有记忆功能的基本逻辑单元，可以储存一位二值信号
+
+    2.特点: 
+     1)能保持稳定的状态
+
+     2）在外加信号的影响下能够改变状态，而且可以保持新状态
+    
+    \subsection{电平触发的触发器}
+    \subsubsection{与非门构成的基本RS触发器}
+    1.锁存器 p93
+
+    2.有两个输入端$\overline{S},\overline{R}$,前者为置1端后者为置0端
+    且为低电平有效，要求$\overline{S},\overline{R}$不能同时为0.两个输出端
+    $Q,\overline{Q}$。Q的状态为触发器的状态。
+
+    3.$\overline{S},\overline{Q}$同时为0时，触发器的状态由门的延迟决定，是不确定状态
+
+    \subsubsection{触发器逻辑功能的描述方法}
+    1）状态转移真值表:以输入端和现在的稳定状态为输入，下一状态的稳定状态为输出
+
+    2）状态方程:由卡诺图化简而成的逻辑函数，切记要写要求
+
+    3）状态转移图:由图表示的状态转移，在箭头上写转移的要求
+
+    4）激励表:触发器的状态由上一时刻到下一时刻要求激励输入时什么
+
+    5）波形图
+    \subsubsection{或非门组成的基本RS触发器}
+    p96
+
+    \subsubsection{基本RS触发器特点}
+    状态由激励输入直接决定，没有统一的控制信号控制触发器的转换时刻，为异步时序电路
+
+    \subsection{时钟触发器}
+
+\end{document}
