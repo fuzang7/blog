@@ -1,0 +1,70 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\begin{document}
+    
+\section{参数的区间估计与假设检验}
+\subsection{区间估计}
+
+1.目的:求出未知参数取值可能的区间，叫这个区间为置信区间
+
+2.置信区间:设总体X分分布函数$F(x,\theta ),$其中$\theta $为未知参数。$X_1,X_2,\cdots ,X_n$为来自总体的简单随机样本，对于给定的$\alpha \in (0,1)$
+如果样本确定的两个统计量$T_1(X_1,X_2,\cdots ,X_n),T_2(X_1,X_2,\cdots ,X_n)$满足
+\[P\{T_1 \leq \theta \leq T_2 \} = 1 - \alpha \]
+则称随机区间$[T_1,T_2]$是参数$\theta $的置信度为$1 - \alpha$的置信区间。
+
+如果统计量$T_1(X_1,X_2,\cdots ,X_n)$满足
+\[[P\{T_1 \leq \theta \} = 1 - \alpha \text{或} ([P\{\theta \leq T_1 \} = 1 - \alpha)\]
+则称$T_1$是参数$\theta $的置信度为$1 - \alpha $的单侧置信下限（上限）
+
+note:1)置信度就是可信度；2）置信区间长度代表估计的精度，精度和置信度不可得兼，一般有限考虑置信度；3）我没只考虑正态总体参数的置信区间问题
+
+3.求解过程:
+\begin{minipage}[t]{0.9\linewidth}
+
+    1)找到未知量对应分布（需要记忆四大分布以及各种未知量的公式）
+
+    2)写出置信区间满足的公式
+
+    3)从不等式中求解出未知量(这里未知量全都是与分布量成反比需要注意)
+
+\end{minipage}
+
+\subsection{假设检验}
+
+1.目的:处理总体分布未知或者只知道形式不知道参数的情况下的未知参数求解
+
+2.思路:对总体参数提出一个假设值，然后利用样本信息判断这个假设是否成立
+
+3.求解过程:
+\begin{minipage}[t]{0.9\linewidth}
+
+    1)提出原假设$H_0$和备择假设$H_1$
+
+    2)找到未知量对应分布（需要记忆四大分布以及各种未知量的公式）
+
+    3)写出假设满足的公式
+
+    4)将已知值代入公式，根据是否满足选择应该接受哪一个假设
+    
+\end{minipage}
+
+\subsubsection{双侧检验和单侧检验}
+1.双侧检验:未知参数过大或过小都是不满足
+
+2.单侧检测:未知参数仅有过大或者过小中的一种时不满足
+
+\  例如:右侧检验
+\[H_0 : \theta = \theta _0(\text{或}H_0 : \theta \leq  \theta _0), H_1 : \theta > \theta _0\]
+
+\subsubsection{两类错误}
+假设检验根据小概率事件原则判断，可能出现错误，出现的错误有两类
+
+1.弃真错误:当$H_0$为真时，检验结果是拒绝$H_0$。犯这一类错误的概率是显著性水平$\alpha$
+
+2.采伪错误:当$H_0$不为真时，检验结果是接受$H_0$。犯这一类错误的概率是$\beta $
+
+两个错误的概率不能同时减小，一般在确定$\alpha$的情况下尽力减小$\beta $
+
+\end{document}
