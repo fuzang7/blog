@@ -1,0 +1,67 @@
+\documentclass[11pt,twoside,a4paper]{ctexart}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\begin{document}
+    
+\section{参数的点估计以及优越性}
+\subsection{点估计}
+点估计:通过样本值求出总体参数的一个具体估计量或估计值
+\subsubsection{矩估计法}
+1.思路:用样本矩替换同阶总体矩
+
+2.过程:
+\begin{minipage}[t]{0.9\linewidth}
+    1)令$EX = \overline{X}$
+
+    2)代入参数得到$h(\theta ) = \overline{X}$
+
+    3)将样本求出的$\overline{X}$代入上式，解出未知量$\theta $
+    
+\end{minipage}
+
+在存在多个未知数的情况时，由大数定律
+\[E(X^i) = A_i = \frac{1}{n}\sum _{j=1}^n x_j^i\]
+列出方程组求解即可
+
+\subsubsection{最大似然估计法}
+1.思路:设一个随机试验由若干种可能$A_1,A_2,\cdots $，在一次试验中出现了结果$A_k$，认为试验$A_k$出现概率大，将事件$A_k$的概率写为
+$P_{A_k} = h(\theta )$，令$P_{A_k}$最大，求出对应的$\theta $
+
+2.似然函数:设$X_1,X_2,\cdots , X_n$时简单随机样本，$x_1,x_2,\cdots ,x_n$为样本观测值，称
+\[L(\theta ) = \prod _{i=1}^n p(x_i,\theta )\]
+为参数$\theta $的似然函数，指样本恰好取观测值的概率
+
+3.设$L(\theta ) = \prod _{i=1}^n p(x_i,\theta )$为参数$\theta $的似然函数，若存在一个只与样本观测值$x_1,x_2,\cdots ,x_n$相关的实数
+$\widehat{\theta}(x_1,x_2,\cdots ,x_n) $使得
+\[L(\widehat{\theta } )= maxL(\theta )\]
+则称$\widehat{\theta}(x_1,x_2,\cdots ,x_n) $为参数$\theta $的最大似然估计值，称$\widehat{\theta}(X_1,X_2,\cdots ,X_n) $为参数$\theta $的最大似然估计量
+
+note:1）似然函数不一定由极大值点，但必然有最大值点，有时候求驻点会失效；2）在多个乘积时，求对数似然函数$\ln L(\theta )$会较好求最大值点，$\ln L(\theta ),L(\theta)$
+有相同的最大值点
+
+\subsection{点估计优良性的评判}
+不同方法求出的估计量不同时判断哪个估计量更好
+\subsubsection{无偏性}
+1.若参数$\theta $的估计量$\widehat{\theta } = \widehat{\theta}(X_1,X_2,\cdots ,X_n)$满足
+\[E(\widehat{\theta }) = \theta \]
+则称$\widehat{\theta }$为$\theta $的无偏估计量
+
+2.解释了为什么方差定义为$S^2 = \frac{1}{n-1}\sum _{i=1}^n(X_i - \overline{X})^2$
+
+3.若求出有偏估计量可以变换为无偏估计量
+
+\subsubsection{有效性}
+1.设$\widehat{\theta }_1,\widehat{\theta }_2$,都是参数$\theta $的无偏估计量，如果
+\[D(\widehat{\theta }_1) < D(\widehat{\theta }_2)\]
+则$\widehat{\theta }_1$比$\widehat{\theta }_2$更有效
+
+\subsubsection{一致性(相合性)}
+
+1.设$\widehat{\theta }_n= \widehat{\theta}(X_1,X_2,\cdots ,X_n)$是$\theta$的一个估计量，对于任意$\varepsilon > 0 $有
+\[\lim_{n \to \infty} P\{|\widehat{\theta }_n - \widehat{\theta }| < \varepsilon \} = 1  \] 
+则称$\widehat{\theta }_n$是$\theta$的一致估计量
+
+note:这个条件很强，一般很难取到
+
+\end{document}

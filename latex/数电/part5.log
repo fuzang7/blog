@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.28)  5 APR 2022 11:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.28)  1 MAY 2022 14:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -656,18 +656,21 @@ Package biblatex Info: Reference segment=0 on input line 6.
 
 [1
 
-] (./part5.aux)
+]
+LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.95> not available
+(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 113.
+ [2] [3] (./part5.aux)
 Package logreq Info: Writing requests to 'part5.run.xml'.
 \openout1 = `part5.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15017 strings out of 478866
- 352451 string characters out of 5864967
- 906117 words of memory out of 5000000
- 34733 multiletter control sequences out of 15000+600000
- 406995 words of font info for 58 fonts, out of 8000000 for 9000
+ 15032 strings out of 478866
+ 353427 string characters out of 5864967
+ 912117 words of memory out of 5000000
+ 34747 multiletter control sequences out of 15000+600000
+ 407003 words of font info for 59 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 101i,4n,104p,1848b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,5n,104p,1848b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on part5.pdf (1 page).
+Output written on part5.pdf (3 pages).
