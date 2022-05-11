@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.28)  1 MAY 2022 14:00
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.2.28)  11 MAY 2022 11:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**part5
-(./part5.tex
+**part6
+(./part6.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (d:/latex/texlive/2021/texmf-dist/tex/latex/ctex/ctexart.cls (d:/latex/texlive/2021/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/03/14 v2.5.6 Backend configuration file (CTEX)
@@ -515,8 +515,8 @@ LaTeX Info: Redefining \] on input line 2924.
 )
 \@quotelevel=\count424
 \@quotereset=\count425
- (./part5.aux)
-\openout1 = `part5.aux'.
+ (./part6.aux)
+\openout1 = `part6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -612,11 +612,11 @@ Package biblatex Info: ... and expl3
  (d:/latex/texlive/2021/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 )
-\openout3 = `part5-blx.bib'.
+\openout3 = `part6-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'part5.bbl' found.
- (./part5.bbl)
+Package biblatex Info: ... file 'part6.bbl' found.
+ (./part6.bbl)
 Package biblatex Info: Reference section=0 on input line 6.
 Package biblatex Info: Reference segment=0 on input line 6.
 
@@ -658,19 +658,31 @@ Package biblatex Info: Reference segment=0 on input line 6.
 
 ]
 LaTeX Font Info:    Font shape `TU/FandolSong-Regular(0)/m/sl' in size <10.95> not available
-(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 113.
- [2] [3] (./part5.aux)
-Package logreq Info: Writing requests to 'part5.run.xml'.
-\openout1 = `part5.run.xml'.
+(Font)              Font shape `TU/FandolSong-Regular(0)/m/it' tried instead on input line 111.
+ [2]
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=tex-text;!
+
+Overfull \hbox (72.71404pt too wide) in paragraph at lines 128--145
+[]\TU/lmr/m/n/10.95 1) \TU/FandolSong-Regular(0)/m/n/10.95 起 动 电 阻 的 计 算\TU/lmr/m/n/10.95 : [] 
+ []
+
+[3]
+Overfull \hbox (71.4986pt too wide) in paragraph at lines 191--205
+[]\TU/lmr/m/n/10.95 3. \TU/FandolSong-Regular(0)/m/n/10.95 变 频 调 速 的 性 能\TU/lmr/m/n/10.95 : [] 
+ []
+
+[4] (./part6.aux)
+Package logreq Info: Writing requests to 'part6.run.xml'.
+\openout1 = `part6.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  15032 strings out of 478866
  353427 string characters out of 5864967
- 912117 words of memory out of 5000000
+ 913117 words of memory out of 5000000
  34747 multiletter control sequences out of 15000+600000
  407003 words of font info for 59 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  101i,5n,104p,1848b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on part5.pdf (3 pages).
+Output written on part6.pdf (4 pages).
